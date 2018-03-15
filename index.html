@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Martin Dessart">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Dessart-Portfolio</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Rammetto+One" rel="stylesheet">
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Fontawesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_inner">
+        <a id="menu" class="header__menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+          </svg>
+        </a>
+        <a class="logo" href="https://www.wwf.fr/"><img src="img/svg/wwf.svg"></a>
+        <h1 class="header__title">MARTIN DESSART</h1>
+        <h2 class="header_subtitle">Front-end Worlwide Traveler</h2>
+      </div>
+    </header>
+    <main class="content">
+      <section class="countries">
+        <nav id="drawer" class="nav">
+          <ul class="nav_list">
+            <li class="nav__item"><a href="https://www.aut.ac.nz/"><img src="img/svg/nz.svg"></a></li>
+            <li class="nav__item"><a href="http://terres-en-melees.com/nos-actions/madagascar/"><img src="img/svg/mada.svg"></a></li>
+            <li class="nav__item"><a href="http://en.teseo.clemessy.com/"><img src="img/svg/italy.svg"></a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="corpus">
+        <picture class="corpus_img">
+          <source media="(min-width: 800px)" srcset="images/kids-large.jpg">
+          <source media="(min-width: 450px)" srcset="images/kids-medium.jpg">
+          <img src="images/kids-small.jpg" alt="Kids in Mada">
+        </picture>
+      </section>
+      <section class="project">
+        <table class="project__table">
+          <tr>
+            <td><a href="http://avarefuge.fr">
+              <picture class="project_img">
+                <source media="(min-width: 800px)" srcset="images/mimine-large.jpg">
+                <source media="(min-width: 450px)" srcset="images/mimine-medium.jpg">
+                <img src="images/mimine-small.jpg" alt="Love Mimine">
+              </picture></a>
+            </td>
+            <td><a href="http://terres-en-melees.com/nos-actions/maroc">
+              <picture class="project_img">
+                <source media="(min-width: 800px)" srcset="images/tem-large.jpg">
+                <source media="(min-width: 450px)" srcset="images/tem-medium.jpg">
+                <img src="images/tem-small.jpg" alt="Love Rugby">
+              </picture></a>
+            </td>
+            <td><a href="https://www.helloasso.com/associations/melindika">
+              <picture class="project_img">
+                <source media="(min-width: 800px)" srcset="images/melindika-large.jpg">
+                <source media="(min-width: 450px)" srcset="images/melindika-medium.jpg">
+                <img src="images/melindika-small.jpg" alt="Love Zambia">
+              </picture></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Refuge AVA</td>
+            <td>Terres en Mêlées</td>
+            <td>Melindika</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+    <footer class="icons">
+      <a href="https://www.linkedin.com/in/martin-dessart/" class="icons-entity">
+        <i class="fab fa-github"></i>
+        <p>GitHub</p>
+      </a>
+      <a href="https://github.com/momomartin" class="icons-entity">
+        <i class="fab fa-linkedin"></i>
+        <p>LinkedIn</p>
+      </a>
+      <a href="mailto:martin.dessart@2017.icam.fr" class="icons-entity">
+        <i class="far fa-envelope"></i>
+        <p>E-Mail</p>
+      </a>
+      <a class="git" href="https://github.com/momomartin/Portfolio">View source on GitHub</a>
+    </footer>
+    <script>
+      //Hamburger icons fonction
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.nav');
+      menu.addEventListener('click', function(e) {
+      drawer.classList.toggle('open');
+      e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+      drawer.classList.remove('open');
+      });
+    </script>
+  </body>
+</html>
