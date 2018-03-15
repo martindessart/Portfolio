@@ -124,6 +124,9 @@ td {
     text-align: center;
     padding:1%;
 }
+img:hover {
+  opacity: 0.5;
+}
 
 /*
  *
